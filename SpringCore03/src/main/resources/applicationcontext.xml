@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+    <!-- Bean definitions go here -->
+    
+    <!-- in order without using any name ,index,type-->
+    <bean id="emp" class="com.prog.bean.Employee">
+    <constructor-arg  value="01"/>
+    <constructor-arg  value="samantha"/>
+    <constructor-arg  value="armoor"/>
+    <constructor-arg   value="45644.5f"/>
+    </bean>
+    
+    <!-- we can also write in order or any order ,if u code in any order then use index -->
+    <bean id="emp1" class="com.prog.bean.Employee">
+    <constructor-arg index="1" value="rohan"/>
+        <constructor-arg index="0" value="01"/>
+    <constructor-arg index="2" value="pune"/>
+    <constructor-arg index="3"  value="45644.5f"/>
+    </bean>
+    
+    
+    <!--if dont want indexs u can also use name ,public Employee(Integer id, String empName, String empCity, Float empSalary)  -->
+     <bean id="emp2" class="com.prog.bean.Employee">
+    <constructor-arg name="id" value="02"/>
+    <constructor-arg name="empName" value="rohit"/>
+    <constructor-arg name="empCity" value="hyd"/>
+    <constructor-arg name="empSalary"  value="444.5f"/>
+    </bean>
+    
+    <!--we can use type  -->
+     <bean id="emp3" class="com.prog.bean.Employee">
+    <constructor-arg type="java.lang.Integer" value="03"/>
+    <constructor-arg type="java.lang.String" value="chiru"/>
+    <constructor-arg type="java.lang.String" value="delhi"/>
+    <constructor-arg type="java.lang.Float" value="44.5f"/>
+    </bean>
+    
+    
+    
+</beans>

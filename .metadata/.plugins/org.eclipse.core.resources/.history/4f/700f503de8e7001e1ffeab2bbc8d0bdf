@@ -1,0 +1,10 @@
+package com.prog.service;
+
+import java.util.List;
+
+import com.prog.model.CustomerInfo;
+
+public interface ICustomerService {
+
+	public List<CustomerInfo> getCustomers();
+}

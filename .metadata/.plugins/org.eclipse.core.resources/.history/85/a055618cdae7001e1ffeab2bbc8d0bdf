@@ -1,0 +1,25 @@
+package com.prog.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.prog.model.CustomerInfo;
+import com.prog.service.ICustomerService;
+
+@Controller
+public class CustomerContoller {
+
+	private ICustomerService service;
+	
+	@GetMapping("/cxlist")
+	public String fetchCustomerData() {
+		
+		
+		List<CustomerInfo> clist = service.getCustomers();
+		System.out.println(clist);
+		return "customerlist";
+		
+	}
+}

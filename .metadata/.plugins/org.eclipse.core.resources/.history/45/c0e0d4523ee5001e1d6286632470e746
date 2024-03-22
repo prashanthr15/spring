@@ -1,0 +1,22 @@
+package com.prog.service;
+
+import java.util.List;
+
+import com.prog.bo.Customer;
+import com.prog.dto.CustomerDTO;
+
+public class CustomerServiceImp implements ICustomerService {
+
+	@Override
+	public String registerCustomer(CustomerDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> findAllCustomers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

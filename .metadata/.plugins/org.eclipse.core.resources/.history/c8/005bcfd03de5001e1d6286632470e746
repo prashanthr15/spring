@@ -1,0 +1,8 @@
+package com.prog.service;
+
+public interface ICustomerService {
+
+	public String registerCustomer() {
+		
+	}
+}

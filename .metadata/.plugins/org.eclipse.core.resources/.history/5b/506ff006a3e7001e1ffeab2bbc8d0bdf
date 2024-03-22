@@ -1,0 +1,10 @@
+package com.prog.model;
+
+public class Implementers {
+
+	private Integer id;
+	private String iname;
+	private String icity;
+	private Double isalary;
+	
+}

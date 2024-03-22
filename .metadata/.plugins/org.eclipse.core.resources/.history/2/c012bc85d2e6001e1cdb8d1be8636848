@@ -1,0 +1,7 @@
+spring.application.name=SecondSpringMVC-1
+
+
+#prefix means location
+spring.mvc.view.prefix=/pages/
+#suffix means location file type
+spring.mvc.view.suffix=.jsp

@@ -1,0 +1,70 @@
+package com.prog.bo;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="vaccineInfo")
+public class VaccineDetails {
+
+	@Id
+	@Column(name="ID")
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+	@Column(name="VACCINENAME")
+	private String vaccinename;
+	@Column(name="VACCINECOMPANY")
+	private String vaccinecompany;
+	@Column(name="PRICE")
+	private Integer price;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getVaccineName() {
+		return vaccinename;
+	}
+	public void setVaccineName(String vaccineName) {
+		this.vaccinename = vaccineName;
+	}
+	public String getVaccineCompany() {
+		return vaccinecompany;
+	}
+	public void setVaccineCompany(String vaccinecompany) {
+		this.vaccinecompany = vaccinecompany;
+	}
+	public Integer getPrice() {
+		return price;
+	}
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "VaccineDetails [vaccineName=" + vaccinename + ", vaccineCompany=" + vaccinecompany
+				+ ", price=" + price + "]";
+	}
+	public VaccineDetails() {
+		System.out.println("zero parameter constructer in vaccine details cls");
+	}
+	public VaccineDetails(String vaccinename, String vaccinecompany, Integer price) {
+		super();
+		
+		this.vaccinename = vaccinename;
+		this.vaccinecompany = vaccinecompany;
+		this.price = price;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

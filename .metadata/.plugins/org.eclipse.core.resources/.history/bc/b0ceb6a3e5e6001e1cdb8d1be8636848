@@ -1,0 +1,7 @@
+
+
+#server.port=8484
+#prefix means location
+#spring.mvc.view.prefix=/
+#suffix means location file type
+#spring.mvc.view.suffix=.jsp

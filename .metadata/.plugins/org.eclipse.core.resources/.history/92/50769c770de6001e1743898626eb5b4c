@@ -1,0 +1,21 @@
+package com.prog.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class FirstWebController {
+
+	
+	public ModelAndView displayMessage() {
+		
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("messsage","welcome to learning");
+		
+		mav.setViewName("index");
+		
+		return mav;
+							
+	}
+}

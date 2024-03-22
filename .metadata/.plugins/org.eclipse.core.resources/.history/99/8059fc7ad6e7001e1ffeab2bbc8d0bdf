@@ -1,0 +1,8 @@
+spring.application.name=SpringCRMApp
+
+
+server.port=8484
+spring.mvc.view.prefix=/
+spring.mvc.view.suffix=.jsp
+
+

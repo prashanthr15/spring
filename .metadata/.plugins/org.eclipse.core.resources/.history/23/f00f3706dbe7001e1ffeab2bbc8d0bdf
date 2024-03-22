@@ -1,0 +1,30 @@
+package com.prog.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.prog.model.CustomerInfo;
+import com.prog.service.ICustomerService;
+
+@Controller
+public class CustomerContoller {
+
+	@Autowired
+	private ICustomerService service;
+	
+	@GetMapping("/cxlist")
+	public String fetchCustomerData(Model model) {
+		
+		
+		List<CustomerInfo> customerlist = service.getCustomers();
+		//for debugging purpose
+		System.out.println(customerlist);
+		model.addAttribute("customers",customerlist);
+		return "customerlist";
+		
+	}
+}

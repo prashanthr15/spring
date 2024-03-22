@@ -1,0 +1,15 @@
+package com.prog.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class FirstController {
+
+	public String someMessage(Model model) {
+		System.out.println("implementation by " +model.getClass().getName());
+		
+		model.addAttribute("name","navib");
+		return "home";//logical view name lvn
+	}
+}

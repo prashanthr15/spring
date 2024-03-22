@@ -1,0 +1,3 @@
+spring.application.name=FirstSpringMVC
+#prefix means location
+spring.mvc.view.prefix=

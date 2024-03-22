@@ -1,0 +1,7 @@
+spring.application.name=FormBindingApp
+
+
+server.servlet.context-path=/first
+spring.mvc.view.prefix=/pages/
+spring.mvc.view.suffix=.jsp
+

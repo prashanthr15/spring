@@ -1,0 +1,4 @@
+spring.application.name=FirstSpringMVC
+#prefix means location
+spring.mvc.view.prefix=/views/
+spring.mvc.view.suffix=.jsp

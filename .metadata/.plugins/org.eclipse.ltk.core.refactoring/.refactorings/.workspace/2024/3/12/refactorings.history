@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SecondSpringMVC&apos; to &apos;GreetingsApp&apos;" description="Rename resource &apos;SecondSpringMVC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SecondSpringMVC" name="GreetingsApp" stamp="1710958186449" updateReferences="true"/>
+</session>

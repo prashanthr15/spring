@@ -1,0 +1,21 @@
+package com.prog;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.prog.service.CustomerServiceImp;
+
+@SpringBootApplication
+public class SpringBootMongoDbApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(SpringBootMongoDbApplication.class, args);
+	CustomerServiceImp service = context.getBean(CustomerServiceImp.class);
+	
+	
+	
+	context.close();
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.prog.controller;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class QueryController {
+
+	@GetMapping("/getmessage")
+	public String displayMessage(Map<String, Object>model) {
+		
+		return "index";
+	}
+}

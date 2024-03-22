@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+    <!-- Bean definitions go here -->
+    
+   <!--    <bean id="alpha" class="com.prog.beans.Alpha">
+          <property ref="beta" name="beta"></property>
+      
+      </bean>
+    
+    <bean id="beta" class="com.prog.beans.Beta">
+    <property ref="alpha" name="alpha"></property>
+    </bean> -->
+    
+    
+<!--     it is not possible because while creating the alpha bean coonstructer is injecting the beta obj which is not yet created
+first alpha bean is created and then beta bean is created
+ -->    
+ <!-- <bean id="alpha" class="com.prog.beans.Alpha">
+          <constructor-arg ref="beta" name="beta"></constructor-arg>
+      
+      </bean>
+    
+    <bean id="beta" class="com.prog.beans.Beta">
+    <constructor-arg ref="alpha" name="alpha"></constructor-arg>
+    </bean> -->
+    
+    
+<!--     it is possible because alpha and beta bean is created then set method is called and injected with bean
+ -->    
+    <bean id="alpha" class="com.prog.beans.Alpha">
+          <property ref="beta" name="beta"></property>
+      
+      </bean>
+    
+<!--     while cfreateing the bean of beta means alpha bean is alredy cretaed
+ -->    <bean id="beta" class="com.prog.beans.Beta">
+    <constructor-arg ref="alpha" name="alpha"></constructor-arg>
+    </bean>
+    
+    
+</beans>

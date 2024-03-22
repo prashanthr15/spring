@@ -1,0 +1,10 @@
+package com.prog.service;
+
+import com.prog.dto.CustomerDTO;
+
+public interface ICustomerService {
+
+	public String registerCustomer(CustomerDTO dto) {
+		
+	}
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Bean definitions go here -->
+
+	<!-- when ever we have the dependent cls and target cls which ever we create 
+		first object first dependentobject later target object -->
+	<!-- creating bean for dependent -->
+	<bean id="firstFlight" class="com.prog.beans.FirstFlight" autowire-candidate="false"></bean>
+	<!-- <bean id="blueDart" class="com.prog.beans.BlueDart" primary="true"></bean>
+ -->	
+ <bean id="blueDart" class="com.prog.beans.BlueDart" autowire-candidate="false"></bean>
+ 
+ <bean id="fedex" class="com.prog.beans.Fedex"></bean> 
+	<!-- now using autowire="byName" private CourierService service; -->
+<!-- 	<bean id="service" class="com.prog.beans.Fedex"></bean>
+ -->
+
+
+	<!-- creating bean for target cls autowire="byType" only one bean is there 
+		its ok if 3 beans are there then it lead to exception and ambiquty.use primary="true" -->
+	<bean id="amazon" class="com.prog.beans.Amazon" autowire="byType"></bean>
+
+<!-- 	<bean id="amazon" class="com.prog.beans.Amazon" autowire="no"></bean>
+no auto wireing
+<property ref="bluedart" name="service"/>
+ -->
+
+
+</beans>
